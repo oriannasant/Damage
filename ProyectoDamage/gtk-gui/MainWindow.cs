@@ -102,6 +102,7 @@ public partial class MainWindow
 		this.entcontraseña.Name = "entcontraseña";
 		this.entcontraseña.Text = global::Mono.Unix.Catalog.GetString("Contraseña");
 		this.entcontraseña.IsEditable = true;
+		this.entcontraseña.Visibility = false;
 		this.entcontraseña.InvisibleChar = '●';
 		this.vbox4.Add(this.entcontraseña);
 		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.entcontraseña]));

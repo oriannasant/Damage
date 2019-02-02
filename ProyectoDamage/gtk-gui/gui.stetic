@@ -21,11 +21,20 @@
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <child>
-              <placeholder />
+              <widget class="Gtk.Image" id="imaglogo">
+                <property name="MemberName" />
+              </widget>
+              <packing>
+                <property name="Position">0</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
             </child>
             <child>
-              <widget class="Gtk.DrawingArea" id="drawingarea12">
+              <widget class="Gtk.FileChooserWidget" id="filechooserwidget1">
                 <property name="MemberName" />
+                <signal name="SelectionChanged" handler="OnFilechooserwidget1SelectionChanged" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -33,18 +42,25 @@
               </packing>
             </child>
             <child>
-              <widget class="Gtk.DrawingArea" id="drawingarea13">
+              <widget class="Gtk.Entry" id="entlogo">
                 <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="IsEditable">True</property>
+                <property name="InvisibleChar">●</property>
               </widget>
               <packing>
                 <property name="Position">2</property>
                 <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
               </packing>
             </child>
           </widget>
           <packing>
             <property name="Position">0</property>
             <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
           </packing>
         </child>
         <child>
@@ -93,6 +109,7 @@
                 <property name="CanFocus">True</property>
                 <property name="Text" translatable="yes">Contraseña</property>
                 <property name="IsEditable">True</property>
+                <property name="Visibility">False</property>
                 <property name="InvisibleChar">●</property>
               </widget>
               <packing>
@@ -142,13 +159,13 @@
               </packing>
             </child>
             <child>
-              <widget class="Gtk.HBox" id="hbox6">
+              <widget class="Gtk.HBox" id="hbox7">
                 <property name="MemberName" />
                 <property name="Spacing">6</property>
                 <child>
-                  <widget class="Gtk.Label" id="lblhora">
+                  <widget class="Gtk.Label" id="lblfecha">
                     <property name="MemberName" />
-                    <property name="LabelProp" translatable="yes" />
+                    <property name="LabelProp" translatable="yes">fecha</property>
                   </widget>
                   <packing>
                     <property name="Position">0</property>
@@ -158,16 +175,7 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="Gtk.Label" id="lblhora1">
-                    <property name="MemberName" />
-                    <property name="LabelProp" translatable="yes" />
-                  </widget>
-                  <packing>
-                    <property name="Position">1</property>
-                    <property name="AutoSize">True</property>
-                    <property name="Expand">False</property>
-                    <property name="Fill">False</property>
-                  </packing>
+                  <placeholder />
                 </child>
               </widget>
               <packing>
