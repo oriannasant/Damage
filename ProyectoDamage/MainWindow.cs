@@ -3,6 +3,7 @@ using Gtk;
 
 public partial class MainWindow : Gtk.Window
 {
+    public static string nom;
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
@@ -13,4 +14,6 @@ public partial class MainWindow : Gtk.Window
         Application.Quit();
         a.RetVal = true;
     }
+
+
 }
