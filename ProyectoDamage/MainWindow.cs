@@ -4,9 +4,7 @@ using Gdk;
 public partial class MainWindow : Gtk.Window
 {
 
-    public partial class MainWindow : Gtk.Window
-
-    {
+   
         public static string nom;
         public MainWindow() : base(Gtk.WindowType.Toplevel)
         {
@@ -42,11 +40,11 @@ public partial class MainWindow : Gtk.Window
         protected bool update_fechahora()
         {
 
-            lblfecha.Txt = DateTime.Now.ToString("dd/MM/yyyy");
-            lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+           // lblfecha.Txt = DateTime.Now.ToString("dd/MM/yyyy");
+           // lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
 
             return true;
-        }
+
     }
 }
 
