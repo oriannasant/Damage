@@ -7,9 +7,11 @@ public partial class MainWindow
 
 	private global::Gtk.VBox vbox5;
 
-	private global::Gtk.DrawingArea drawingarea12;
+	private global::Gtk.Image imaglogo;
 
-	private global::Gtk.DrawingArea drawingarea13;
+	private global::Gtk.FileChooserWidget Logo;
+
+	private global::Gtk.Entry entlogo;
 
 	private global::Gtk.VBox vbox4;
 
@@ -27,11 +29,11 @@ public partial class MainWindow
 
 	private global::Gtk.DrawingArea drawingarea15;
 
-	private global::Gtk.HBox hbox6;
+	private global::Gtk.HBox hbox7;
+
+	private global::Gtk.Label lblfecha;
 
 	private global::Gtk.Label lblhora;
-
-	private global::Gtk.Label lblhora1;
 
 	private global::Gtk.DrawingArea drawingarea10;
 
@@ -51,20 +53,35 @@ public partial class MainWindow
 		this.vbox5.Name = "vbox5";
 		this.vbox5.Spacing = 6;
 		// Container child vbox5.Gtk.Box+BoxChild
-		this.drawingarea12 = new global::Gtk.DrawingArea();
-		this.drawingarea12.Name = "drawingarea12";
-		this.vbox5.Add(this.drawingarea12);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.drawingarea12]));
-		w1.Position = 1;
+		this.imaglogo = new global::Gtk.Image();
+		this.imaglogo.Name = "imaglogo";
+		this.vbox5.Add(this.imaglogo);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.imaglogo]));
+		w1.Position = 0;
+		w1.Expand = false;
+		w1.Fill = false;
 		// Container child vbox5.Gtk.Box+BoxChild
-		this.drawingarea13 = new global::Gtk.DrawingArea();
-		this.drawingarea13.Name = "drawingarea13";
-		this.vbox5.Add(this.drawingarea13);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.drawingarea13]));
-		w2.Position = 2;
+		this.Logo = new global::Gtk.FileChooserWidget(((global::Gtk.FileChooserAction)(0)));
+		this.Logo.Name = "Logo";
+		this.vbox5.Add(this.Logo);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.Logo]));
+		w2.Position = 1;
+		// Container child vbox5.Gtk.Box+BoxChild
+		this.entlogo = new global::Gtk.Entry();
+		this.entlogo.CanFocus = true;
+		this.entlogo.Name = "entlogo";
+		this.entlogo.IsEditable = true;
+		this.entlogo.InvisibleChar = '●';
+		this.vbox5.Add(this.entlogo);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.entlogo]));
+		w3.Position = 2;
+		w3.Expand = false;
+		w3.Fill = false;
 		this.hbox1.Add(this.vbox5);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.vbox5]));
-		w3.Position = 0;
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.vbox5]));
+		w4.Position = 0;
+		w4.Expand = false;
+		w4.Fill = false;
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.vbox4 = new global::Gtk.VBox();
 		this.vbox4.Name = "vbox4";
@@ -73,17 +90,17 @@ public partial class MainWindow
 		this.drawingarea9 = new global::Gtk.DrawingArea();
 		this.drawingarea9.Name = "drawingarea9";
 		this.vbox4.Add(this.drawingarea9);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.drawingarea9]));
-		w4.Position = 0;
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.drawingarea9]));
+		w5.Position = 0;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.lblinicio = new global::Gtk.Label();
 		this.lblinicio.Name = "lblinicio";
 		this.lblinicio.LabelProp = global::Mono.Unix.Catalog.GetString("Inicio de sesión");
 		this.vbox4.Add(this.lblinicio);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.lblinicio]));
-		w5.Position = 1;
-		w5.Expand = false;
-		w5.Fill = false;
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.lblinicio]));
+		w6.Position = 1;
+		w6.Expand = false;
+		w6.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.entnombre = new global::Gtk.Entry();
 		this.entnombre.CanFocus = true;
@@ -92,10 +109,10 @@ public partial class MainWindow
 		this.entnombre.IsEditable = true;
 		this.entnombre.InvisibleChar = '●';
 		this.vbox4.Add(this.entnombre);
-		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.entnombre]));
-		w6.Position = 2;
-		w6.Expand = false;
-		w6.Fill = false;
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.entnombre]));
+		w7.Position = 2;
+		w7.Expand = false;
+		w7.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.entcontraseña = new global::Gtk.Entry();
 		this.entcontraseña.CanFocus = true;
@@ -105,10 +122,10 @@ public partial class MainWindow
 		this.entcontraseña.Visibility = false;
 		this.entcontraseña.InvisibleChar = '●';
 		this.vbox4.Add(this.entcontraseña);
-		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.entcontraseña]));
-		w7.Position = 3;
-		w7.Expand = false;
-		w7.Fill = false;
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.entcontraseña]));
+		w8.Position = 3;
+		w8.Expand = false;
+		w8.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.btniniciar = new global::Gtk.Button();
 		this.btniniciar.CanFocus = true;
@@ -116,10 +133,10 @@ public partial class MainWindow
 		this.btniniciar.UseUnderline = true;
 		this.btniniciar.Label = global::Mono.Unix.Catalog.GetString("Iniciar sesión");
 		this.vbox4.Add(this.btniniciar);
-		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.btniniciar]));
-		w8.Position = 4;
-		w8.Expand = false;
-		w8.Fill = false;
+		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.btniniciar]));
+		w9.Position = 4;
+		w9.Expand = false;
+		w9.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.btnsalir = new global::Gtk.Button();
 		this.btnsalir.CanFocus = true;
@@ -127,54 +144,54 @@ public partial class MainWindow
 		this.btnsalir.UseUnderline = true;
 		this.btnsalir.Label = global::Mono.Unix.Catalog.GetString("Salir");
 		this.vbox4.Add(this.btnsalir);
-		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.btnsalir]));
-		w9.Position = 5;
-		w9.Expand = false;
-		w9.Fill = false;
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.btnsalir]));
+		w10.Position = 5;
+		w10.Expand = false;
+		w10.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.drawingarea15 = new global::Gtk.DrawingArea();
 		this.drawingarea15.Name = "drawingarea15";
 		this.vbox4.Add(this.drawingarea15);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.drawingarea15]));
-		w10.Position = 6;
+		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.drawingarea15]));
+		w11.Position = 6;
 		// Container child vbox4.Gtk.Box+BoxChild
-		this.hbox6 = new global::Gtk.HBox();
-		this.hbox6.Name = "hbox6";
-		this.hbox6.Spacing = 6;
-		// Container child hbox6.Gtk.Box+BoxChild
-		this.lblhora = new global::Gtk.Label();
-		this.lblhora.Name = "lblhora";
-		this.lblhora.LabelProp = "";
-		this.hbox6.Add(this.lblhora);
-		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.lblhora]));
-		w11.Position = 0;
-		w11.Expand = false;
-		w11.Fill = false;
-		// Container child hbox6.Gtk.Box+BoxChild
-		this.lblhora1 = new global::Gtk.Label();
-		this.lblhora1.Name = "lblhora1";
-		this.lblhora1.LabelProp = "";
-		this.hbox6.Add(this.lblhora1);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.lblhora1]));
-		w12.Position = 1;
+		this.hbox7 = new global::Gtk.HBox();
+		this.hbox7.Name = "hbox7";
+		this.hbox7.Spacing = 6;
+		// Container child hbox7.Gtk.Box+BoxChild
+		this.lblfecha = new global::Gtk.Label();
+		this.lblfecha.Name = "lblfecha";
+		this.lblfecha.LabelProp = global::Mono.Unix.Catalog.GetString("fecha");
+		this.hbox7.Add(this.lblfecha);
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox7[this.lblfecha]));
+		w12.Position = 0;
 		w12.Expand = false;
 		w12.Fill = false;
-		this.vbox4.Add(this.hbox6);
-		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.hbox6]));
-		w13.Position = 7;
+		// Container child hbox7.Gtk.Box+BoxChild
+		this.lblhora = new global::Gtk.Label();
+		this.lblhora.Name = "lblhora";
+		this.lblhora.LabelProp = global::Mono.Unix.Catalog.GetString("hora");
+		this.hbox7.Add(this.lblhora);
+		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox7[this.lblhora]));
+		w13.Position = 1;
 		w13.Expand = false;
 		w13.Fill = false;
-		this.hbox1.Add(this.vbox4);
-		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.vbox4]));
-		w14.Position = 1;
+		this.vbox4.Add(this.hbox7);
+		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.hbox7]));
+		w14.Position = 7;
 		w14.Expand = false;
 		w14.Fill = false;
+		this.hbox1.Add(this.vbox4);
+		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.vbox4]));
+		w15.Position = 1;
+		w15.Expand = false;
+		w15.Fill = false;
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.drawingarea10 = new global::Gtk.DrawingArea();
 		this.drawingarea10.Name = "drawingarea10";
 		this.hbox1.Add(this.drawingarea10);
-		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.drawingarea10]));
-		w15.Position = 2;
+		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.drawingarea10]));
+		w16.Position = 2;
 		this.Add(this.hbox1);
 		if ((this.Child != null))
 		{
@@ -183,6 +200,5 @@ public partial class MainWindow
 		this.DefaultWidth = 400;
 		this.DefaultHeight = 300;
 		this.Show();
-		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 	}
 }
