@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <stetic-interface>
   <configuration>
     <images-root-path>..</images-root-path>
@@ -177,9 +177,8 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="Gtk.Label" id="lblhora">
+                  <widget class="Gtk.Label" id="lblhora1">
                     <property name="MemberName" />
-                    <property name="LabelProp" translatable="yes">hora</property>
                   </widget>
                   <packing>
                     <property name="Position">1</property>
