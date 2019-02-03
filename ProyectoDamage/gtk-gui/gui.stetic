@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <stetic-interface>
   <configuration>
     <images-root-path>..</images-root-path>
@@ -165,7 +165,10 @@
                 <child>
                   <widget class="Gtk.Label" id="lblfecha">
                     <property name="MemberName" />
+<<<<<<< Updated upstream
                     <property name="LabelProp" translatable="yes">fecha</property>
+=======
+>>>>>>> Stashed changes
                   </widget>
                   <packing>
                     <property name="Position">0</property>
@@ -175,7 +178,19 @@
                   </packing>
                 </child>
                 <child>
+<<<<<<< Updated upstream
                   <placeholder />
+=======
+                  <widget class="Gtk.Label" id="lblhora1">
+                    <property name="MemberName" />
+                  </widget>
+                  <packing>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
+>>>>>>> Stashed changes
                 </child>
               </widget>
               <packing>
